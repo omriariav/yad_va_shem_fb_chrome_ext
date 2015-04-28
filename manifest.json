@@ -1,6 +1,6 @@
 {
-  "name": "Unofficial YADVASHEM Facebook Chrome Extension",
-  "description": "YADVASHEM is the unofficial tool that lets you lookup Facebook profiles lastnames in the holocaust database of Yad Va Shem museum. Developed by @omriariav",
+  "name": "Unofficial YADVASHEM Facebook Chrome Ext.",
+  "description": "YADVASHEM Chrome ext lets you lookup profiles lastnames in the holocaust names database of Yad Va Shem museum",
   "short_name": "YADVASHEM Facebook Chrome Extension by @omriariav",
   "homepage_url": "http://medium.com/@omriariav",
     "icons": {
@@ -10,7 +10,8 @@
      "128": "icons/128x128.png"
   },
   "background": {
-    "scripts": ["js/jquery-2.1.3.js", "js/bg.js"]
+    "scripts": ["js/jquery-2.1.3.js", "js/bg.js"],
+    "persistent": false
   },
   "permissions": [
     "*://*.facebook.com/*"
