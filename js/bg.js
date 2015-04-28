@@ -1,4 +1,4 @@
-var YAD_VA_SHEM_SEARCH_URL = "http://db.yadvashem.org/names/nameResults.html?lastNameAdv=(!!!LASTNAME!!!)&lastNameAdvType=THESAURUS&language=en";
+var YAD_VA_SHEM_SEARCH_URL = "http://db.yadvashem.org/names/nameResults.html?lastNameAdv=(!!!LASTNAME!!!)&lastNameAdvType=LITERAL&language=en";
 var LAST_NAME_REPLACE_STRING = "(!!!LASTNAME!!!)";
 
 function search_by_last_name(last_name_string) {

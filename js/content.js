@@ -1,7 +1,6 @@
 var _html = "<span id='yad_va_shem_btn'>&nbsp;&#10017;&nbsp;</span>";
 
 var call_bg_script = function(meta_data) {
-    console.log(meta_data);
     chrome.runtime.sendMessage({type:"fb", fb_data: meta_data}, function(response) {
         console.log(response.farewell);
     });
