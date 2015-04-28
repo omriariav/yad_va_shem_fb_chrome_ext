@@ -1,0 +1,6 @@
+#yad_va_shem_btn {
+    opacity: 0.5;
+}
+#yad_va_shem_btn:hover {
+    opacity: 1;
+}
