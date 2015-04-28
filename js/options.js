@@ -9,10 +9,10 @@ $(document).ready( function() {
     $('#turnOnOffExt').change(function() {
         if($(this).is(":checked")) {
             localStorage.setItem('_turnOnOffExt','1');
-            //_gaq.push(['_trackEvent', 'notificationsOn', 'notification']);
+            _gaq.push(['_trackEvent', 'extOn', 'options']);
         }
         else {
-            //_gaq.push(['_trackEvent', 'notificationsOff', 'notification']);
+            _gaq.push(['_trackEvent', 'extOff', 'options']);
             localStorage.setItem('_turnOnOffExt', '0');
         }
     });
