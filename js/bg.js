@@ -15,17 +15,25 @@ function search_by_last_name(last_name_string) {
     });
 }
 
+localStorage.setItem("_turnOnOffExt", "1");
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         var _search_string;
         console.log(request);
-        if (request.fb_data.fb_alt_name != "") {
-            _search_string = request.fb_data.fb_alt_name.replace("(","").replace(")","");
-            search_by_last_name(_search_string)
-        } else {
-            _search_string = request.fb_data.fb_pathname;
-            $.getJSON("https://graph.facebook.com/" + _search_string, function(json) {
-                search_by_last_name(json.last_name);
-            });
+        if (request.type == "fb") {
+            if (request.fb_data.fb_alt_name != "") {
+                _search_string = request.fb_data.fb_alt_name.replace("(","").replace(")","");
+                search_by_last_name(_search_string)
+            } else {
+                _search_string = request.fb_data.fb_pathname;
+                $.getJSON("https://graph.facebook.com/" + _search_string, function(json) {
+                    search_by_last_name(json.last_name);
+                });
+            }
+        } else if (request.type == "status") {
+            var _flag = localStorage.getItem("_turnOnOffExt") || "1";
+            sendResponse(_flag)
         }
+
     });

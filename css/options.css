@@ -1,0 +1,7 @@
+body {
+    background-color: #FFE200;
+}
+label,p {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
