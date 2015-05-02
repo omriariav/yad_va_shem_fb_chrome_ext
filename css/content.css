@@ -1,6 +1,6 @@
 #yad_va_shem_btn {
-    opacity: 0.5;
+    font-size: 35px;
 }
 #yad_va_shem_btn:hover {
-    opacity: 1;
+    font-weight: bolder;
 }
